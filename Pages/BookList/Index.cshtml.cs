@@ -25,14 +25,14 @@ namespace WebApplicationRazor.Pages.BookList
 
     public async Task<IActionResult> OnPostDelete(int id)
     {
-      var Book = await _db.Book.FindAsync(id);
+      var book = await _db.Book.FindAsync(id);
 
-      if (Book == null)
+      if (book == null)
       {
         return NotFound();
       }
 
-      _db.Book.Remove(Book);
+      _db.Book.Remove(book);
       await _db.SaveChangesAsync();
 
       return RedirectToPage("Index");

@@ -14,8 +14,7 @@ namespace WebApplicationRazor.Pages.BookList
       _db = db;
     }
 
-    [BindProperty]
-    public Book Book { get; set; }
+    [BindProperty] public Book Book { get; set; }
 
     public void OnGet()
     {
@@ -29,6 +28,7 @@ namespace WebApplicationRazor.Pages.BookList
         await _db.SaveChangesAsync();
         return RedirectToPage("Index");
       }
+
       return Page();
     }
   }

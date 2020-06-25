@@ -6,7 +6,6 @@ namespace WebApplicationRazor.Models
   {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
     {
-
     }
 
     public DbSet<Book> Book { get; set; }

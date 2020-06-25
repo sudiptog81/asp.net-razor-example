@@ -14,7 +14,6 @@ namespace WebApplicationRazor.Pages
 
     public void OnGet()
     {
-
     }
   }
 }
